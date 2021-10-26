@@ -1,5 +1,15 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./generateMarkdown')
+
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), (err) => {
+        if (err){
+            console.error(err)
+        } else console.log('sucsess')
+    })
+}
+
 
 inquirer.prompt([{
     type: 'input',
@@ -8,8 +18,8 @@ inquirer.prompt([{
 },
 {
     type: 'input',
-    message: 'Where are you from?',
-    name: 'location'
+    message: 'What is your email address?',
+    name: 'email'
 },
 {
     type: 'input',
@@ -18,27 +28,40 @@ inquirer.prompt([{
 },
 {
     type: 'input',
-    message: 'What is your Linkedin url?',
-    name: 'linkedin'
+    message: 'Provide a brief description of your project.',
+    name: 'description'
 },
 {
-    type: 'checkbox',
+    type: 'list',
     message: 'Choose license',
     name: 'license',
-    choices: ['Apache License 2.0', 'MIT License', 'GNU Public License v3.0']
+    choices: ['Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'None']
+},
+{
+    type: 'input',
+    message: 'Contribution Guidelines',
+    name: 'contribution'
+},
+{
+    type: 'input',
+    message: 'Test Instructions',
+    name: 'instructions'
+},
+{
+    type: 'input',
+    message: 'Installation Instructions',
+    name: 'install'
+},
+{
+    type: 'input',
+    message: 'Usage Information',
+    name: 'usage'
 }
-])
-    .then(answers => {
-        console.log(answers)
-        const content = html(answers)
-        console.log(content)
-        fs.writeFile('README.md', content, function (err) {
-            if (err) {
-                console.log(err)
-            }
-        })
-    })
 
- const html = answers => {
-     return `README.md`
- }
+])
+
+     .then(answers => {
+         console.log(answers)
+         writeToFile('README.md', answers);
+     })
+

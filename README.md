@@ -1,5 +1,8 @@
 # README Generator 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+[![Watch the video]()](https://youtu.be/vt5fpE0bzSY)
+
 ## Table of Contents
 
 * [Description](#description)
@@ -13,17 +16,17 @@
 
 
 ## Description
-README Generator
+I have created a README file generator using node. You are presented with a set of questions in the terminal you need to answer.
 ## Installation
-README Generator
+
 ## Usage
-README Generator
+
 ## Contribution
-README Generator
+
 ## Test 
-README Generator
+After downloading this onto your machine, in the terminal run node index and the questions will appear one at a time for you to answer.
 ## License
-This app is using MIT License
+This app is using Apache License 2.0
 ## Questions
 Email: 
 elrodjosh96@gmail.com

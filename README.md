@@ -1,7 +1,7 @@
 # README Generator 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[![Watch the video]()](https://youtu.be/vt5fpE0bzSY)
+[![Watch the video](https://youtu.be/qqSmGBSSVH8)](https://youtu.be/qqSmGBSSVH8)
 
 ## Table of Contents
 
